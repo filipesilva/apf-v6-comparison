@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack-cli",
+    "build-prod": "webpack-cli --config webpack.config.prod.js",
     "serve": "webpack-dev-server",
     "build-5-times": "webpack-cli && webpack-cli && webpack-cli && webpack-cli && webpack-cli"
   },
@@ -21,12 +22,14 @@
     "zone.js": "^0.8.20"
   },
   "devDependencies": {
+    "@angular-devkit/build-optimizer": "github:angular/angular-devkit-build-optimizer-builds#96d0be2",
     "@ngtools/webpack": "github:angular/ngtools-webpack-builds#a0fc670",
     "@angular/compiler-cli": "file:../tgz-packages/angular-compiler-cli-6.0.0-beta.7.tgz",
     "html-webpack-plugin": "^3.0.6",
     "raw-loader": "^0.5.1",
     "speed-measure-webpack-plugin": "^1.1.2",
     "typescript": "~2.7.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "~4.1.1",
     "webpack-cli": "~2.0.12",
     "webpack-dev-server": "^3.1.1"
